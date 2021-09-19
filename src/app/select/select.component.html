@@ -1,0 +1,25 @@
+<!-- key down-->
+<!--https://moduscreate.com/blog/adding-keyboard-navigation-to-angular-lists-using-angular-cdk-listkeymanager/-->
+<!--https://newbedev.com/angular-i-want-to-move-focus-of-div-from-to-another-on-arrow-key-buttons-->
+
+<div class="select" (click)="toggleOptions()">
+    <div class="select-current-value">{{ currentValue }}</div>
+
+    <img class="select-arrow"
+         [ngClass]="{ 'select-arrow--open': isOptions }"
+         src="assets/arrow.svg" alt="arrow">
+
+    <div class="options" *ngIf="isOptions">
+        <div class="option"
+             tabindex="{{ car.id }}"
+             [ngClass]="{ 'option--selected': car.title === currentValue }"
+             (click)="changeCurrentValue(car.id)"
+             *ngFor="let car of cars">
+            {{ car.title }}
+        </div>
+    </div>
+
+</div>
+
+
+

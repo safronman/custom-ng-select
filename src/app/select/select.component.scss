@@ -1,0 +1,68 @@
+.select {
+    position: relative;
+
+    width: 208px;
+    height: 30px;
+    border: 3px solid #335152;
+    background-color: #8fe3e5;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+// 1 child
+.select-current-value {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+// 1 child
+.select-arrow {
+    width: 20px;
+    position: absolute;
+    top: 11px;
+    right: 7px;
+    transition: 0.5s;
+
+    &--open {
+        transform: rotate(180deg);
+        transition: 0.5s;
+    }
+}
+
+
+// 1 child
+.options {
+    position: absolute;
+    top: 31px;
+    left: -3px;;
+
+    width: 100%;
+    border: 3px solid cadetblue;
+
+    .option {
+        padding: 5px;
+
+        background-color: aliceblue;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #b0c4f3;
+        }
+
+        &--selected {
+            background-color: #1370e8;
+            color: white;
+
+            &:hover {
+                background-color: #1370e8;
+                color: white;
+            }
+        }
+    }
+
+}
+
